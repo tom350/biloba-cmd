@@ -1,16 +1,25 @@
 package model
 
-import "biloba/helpers/timestamp"
+import "biloba-cmd/helpers/timestamp"
 
 type Kid struct {
 	ID					string
-	Name				string					`json:"name"`
-	BirthDate			*timestamp.Timestamp	`json:"birthDate"`
-	IsOnboardingDone 	bool					`json:"isOnboardingDone"`
-	Gender				int						`json:"gender"`
-	CalendarId			int						`json:"calendarId"`
-	LateDate			*timestamp.Timestamp	`json:"lateDate"`
-	City				City					`json:"city"`
-	Size 				int						`json:"size"`
-	Weight				int						`json:"weight"`
+	Name				string
+	BirthDate			*timestamp.Timestamp
+	IsOnboardingDone 	bool
+	Gender				int
+	CalendarId			int
+	LateDate			*timestamp.Timestamp
+	City				City
+	Size 				int
+	Weight				int
 }
+
+type City struct {
+	Code	string
+	Name	string
+	ZipCode	string
+	ZipName	string
+}
+
+type Kids []Kid
